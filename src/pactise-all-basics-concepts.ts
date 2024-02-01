@@ -89,3 +89,30 @@ const greetingsFriends = (...friends: string[]) : void =>{
     friends.forEach(friend => console.log(`HI ${friend}`))
 }
 greetingsFriends('nahid' ,'sabbir' , 'himel' , 'tohin' , 'shorov')
+
+// -------- type alies --------
+type CrushType = {
+    name: string,
+    age?: number,
+    profession: string,
+    address: string
+} 
+
+const crush1 : CrushType = {
+    name:'moyna',
+    age:18,
+    profession: 'student',
+    address:'dhaka'
+}
+const crush2 :CrushType = {
+    name:'tiya',
+    profession: 'student',
+    address:'dhaka'
+}
+const crush3 :CrushType = {
+    name:'pakhi',
+    age:18,
+    profession: 'student',
+    address:'dhaka'
+}
+
