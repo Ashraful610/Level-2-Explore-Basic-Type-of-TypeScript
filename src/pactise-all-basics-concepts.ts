@@ -10,7 +10,7 @@
 */ 
 
 // string 
-let course = 'Next Level Web Development';
+let course : string = 'Next Level Web Development';
 course = 'Next Level Development';
 
 // number 
@@ -18,18 +18,18 @@ let result : number = 5;
 result = 8
 
 // boolean
-let student = true;
+let student : boolean = true;
 student = false;
 
 // undefined
-const job = undefined;
+const job  = undefined;
 
 // null 
 let salary = null;
 salary = 12000;
 
 // --------- array and tuples in typescript --------------------------------
-const newNames = ['ashraf' , 'asif' , 'akib' ,'rahim']
+const newNames : string [] = ['ashraf' , 'asif' , 'akib' ,'rahim' , '9']
 // newNames.forEach(name => )
 
 
@@ -104,6 +104,7 @@ const crush1 : CrushType = {
     profession: 'student',
     address:'dhaka'
 }
+
 const crush2 :CrushType = {
     name:'tiya',
     profession: 'student',
@@ -116,3 +117,30 @@ const crush3 :CrushType = {
     address:'dhaka'
 }
 
+type newDeveloper = {
+    name:string
+}
+
+// intersection
+type juniorDeveloper = newDeveloper & {
+    expertise:string,
+    skills:string
+}
+
+type leve2Developer = juniorDeveloper & {
+    experience:number,
+    interpersonalSkills: string
+}
+
+// uinion operator  |
+const developer1 : newDeveloper  | juniorDeveloper = {
+    name:'shaiful',
+    expertise:'javascript',
+    skills:'hard working'
+}
+ 
+const nextLevelDeveloper : leve2Developer | juniorDeveloper = {
+    name:'nextLevel',
+    expertise:'javascript',
+    skills:'hard working',
+}
